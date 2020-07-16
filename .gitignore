@@ -1,32 +1,36 @@
-# Prerequisites
-*.d
+#include<iostream>
+using namespace std;
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+int potongan (){
+	
+  float pembayaran, diskon,total,uang,kembalian;
+  cout << "~~~~~~~~~~~~~~~~~~~\n";
+  cout << "~~~UAS PRAKTIKUM~~~~\n" << endl;
+  
+  cout << "Masukkan total Pembelian: ";
+  cin >> pembayaran;
+   if (pembayaran > 500000){
+   	diskon=pembayaran * 0.10;
+    total=pembayaran-diskon;
+	cout<<endl<<"Anda mendapatkan diskon 10%"<<endl;
+   }
+   else{
+   	total=pembayaran;
+   	cout<<"Maaf anda tidak mendapat diskon"<<endl;
+   }
+  cout << "~~~~~~~~~~~~~~~~~~\n";
+  cout << "Jumlah Diskon :"<<diskon<<endl;
+  cout << "Total yang harus bayar: " <<total<<endl;
+  cout << "uang konsumen :";cin>>uang;
+  if (uang>=total){
+  kembalian=uang-total;
+  cout << "uang kembalian: "<<kembalian<<endl;
+  }
+  else{
+  	cout<<"uang anda kurang";
+  } 
+}
+int main(){
+	potongan();
+	return 0;
+}
